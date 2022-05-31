@@ -29,6 +29,7 @@ if [[ ! -f "${GITHUB_WORKSPACE}/sonar-project.properties" ]]; then
     -Dsonar.sources=. \
     -Dsonar.sourceEncoding=UTF-8 \
     -Dsonar.java.binaries=${INPUT_BINARIES}
+    -Dsonar.exclusions=${INPUT_EXCLUSIONS}
 else
   sonar-scanner \
     -Dsonar.host.url=${INPUT_HOST} \
