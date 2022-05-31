@@ -36,3 +36,6 @@ inputs:
   binaries:
     description: "Java binaries files"
     required: false
+  exclusions:
+    description: "Exclude class files"
+    required: false
