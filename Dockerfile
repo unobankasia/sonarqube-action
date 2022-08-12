@@ -21,5 +21,5 @@ ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk
 COPY entrypoint.sh /entrypoint.sh
 
 RUN chmod +x /entrypoint.sh
-USER 1002
+USER 1003
 ENTRYPOINT ["/entrypoint.sh"]
