@@ -13,10 +13,11 @@ LABEL maintainer="dwisiswant0"
 RUN npm config set unsafe-perm true && \
   npm install --silent --save-dev -g typescript@3.5.2 && \
   npm config set unsafe-perm false && \
-  apk add --no-cache ca-certificates jq openjdk17 --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community
+  apk add --no-cache ca-certificates jq openjdk17 --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community && \
+  export JAVA_HOME=/usr/lib/jvm/java-17-openjdk 
 
 ENV NODE_PATH "/usr/lib/node_modules/"
-ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk 
+#ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk 
 
 COPY entrypoint.sh /entrypoint.sh
 
